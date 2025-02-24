@@ -1,0 +1,213 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+body {
+    background-color: rgba(223, 225, 226, 255);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    padding: 1.5rem 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    position: relative;
+    font-style: normal;
+}
+
+#shows {
+    color: lightcoral;
+}
+
+header {
+    position: relative;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    text-align: left;
+    padding: 1vw 10vw;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 3.5vw;
+    letter-spacing: 0.3em;
+    transform: scaleY(1.1);
+    transform-origin: left;
+    z-index: 1;
+    opacity: 0.7;
+    margin: 0;
+    padding: 0;
+}
+
+.shows-container {
+    padding: 0 10vw;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.show-section {
+    margin-bottom: 5rem;
+}
+
+.show-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1em;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+    aspect-ratio: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+    aspect-ratio: 2/1;
+}
+
+.gallery-item.tall {
+    grid-row: span 2;
+    aspect-ratio: 1/2;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    nav {
+        gap: 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    cursor: default;
+}
+
+.lightbox-title {
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.nav-btn:hover {
+    color: lightcoral;
+}
+
+.prev {
+    left: 2rem;
+}
+
+.next {
+    right: 2rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-btn:hover {
+    color: lightcoral;
+}

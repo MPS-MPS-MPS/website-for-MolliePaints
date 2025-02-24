@@ -1,0 +1,141 @@
+/* Import modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+body {
+  background-color: rgba(223, 225, 226, 255);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  padding: 1.5rem 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  position: relative;
+  font-style: normal;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  background-color: lightcoral;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+h2 {
+  padding: 20px 110px;
+}
+
+p {
+  padding: 110px 110px; /* Adjusted padding */
+  max-width: 30em;
+  line-height: 2.5;
+  font-size: 22px;
+  float: left; /* Float paragraph to the left */
+  margin-left: 40px;
+}
+
+#about {
+  color: lightcoral;
+}
+
+#aboutContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 10vw;
+  gap: 10vw;
+  margin-top: 0;
+}
+
+#aboutContainer p {
+  font-size: 1.4rem;
+  line-height: 2.5;
+  color: #333;
+  max-width: 40em;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+#aboutPhoto {
+  max-width: 600px;
+  height: auto;
+  margin: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    gap: 1.5rem;
+  }
+  
+  #aboutContainer {
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+  
+  #aboutPhoto {
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+    position: relative;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    text-align: left;
+    padding: 1vw 10vw;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 3.5vw;
+    letter-spacing: 0.3em;
+    transform: scaleY(1.1);
+    transform-origin: left;
+    z-index: 1;
+    opacity: 0.7;
+    margin: 0;
+    padding: 0;
+}
