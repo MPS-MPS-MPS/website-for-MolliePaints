@@ -9,12 +9,12 @@
 <body>
 
 <nav>
-    <a href="index.html" id="home">HOME</a>
-    <a href="index.html#catalogue" id="catalogue">CATALOGUE</a>
+    <a href="../index.html" id="home">HOME</a>
+    <a href="../index.html#catalogue" id="catalogue">CATALOGUE</a>
     <a href="about.html">ABOUT</a>
     <a href="https://www.instagram.com/mollie_wilson">INSTAGRAM</a>
     <a href="shows.html" id="shows">SHOWS</a>
-    <a href="contact.html" id="contact">CONTACT</a>
+    <a href="contact.html" class="contact-btn">CONTACT</a>
 </nav>
 
 <div id="contactContainer">
@@ -25,14 +25,32 @@
         <div class="contact-details">
             <div class="contact-item">
                 <h3>Email</h3>
-                <p><a href="mailto:info@molliewilson.com">info@molliewilson.com</a></p>
+                <p><a href="mailto:molliew.paints@gmail.com">molliew.paints@gmail.com</a></p>
                 
-                <form class="contact-form" action="mailto:info@molliewilson.com" method="POST" enctype="text/plain">
+                <form class="contact-form" 
+                      name="contact" 
+                      method="POST" 
+                      data-netlify="true"
+                      netlify-honeypot="bot-field">
+                    
+                    <!-- Hidden field for spam protection -->
+                    <p class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+
+                    <!-- Add name attribute to all fields -->
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               placeholder="Your email address" 
+                               required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                        <textarea id="message" 
+                                  name="message" 
+                                  placeholder="Your message" 
+                                  required></textarea>
                     </div>
                     <button type="submit">Send Message</button>
                 </form>

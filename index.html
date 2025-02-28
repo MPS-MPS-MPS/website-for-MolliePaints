@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mollie Wilson - Artist Page</title>
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+<body>
+
+<header id="header">
+    <img src="../assets/mollie sig black simp no stroke 2.png" alt="Mollie Wilson" class="signature">
+</header>
+
+<nav>
+    <a href="index.html" id="home">HOME</a>
+    <a href="#catalogue" id="catalogue">CATALOGUE</a>
+    <a href="pages/about.html">ABOUT</a>
+    <a href="https://www.instagram.com/mollie_wilson">INSTAGRAM</a>
+    <a href="pages/shows.html" id="shows">SHOWS</a>
+    <a href="pages/contact.html" class="contact-btn">CONTACT</a>
+</nav>
+
+<section class="painting-section active">
+    <div class="painting-details">
+        <h2 id="painting-name">PDA</h2>
+        <p><i>40" x 40"</i></p>
+        <p>Oil and acrylic on canvas</p>
+        <p id="price">$500</p>
+    </div>
+    <div class="painting-image">
+        <img src="assets/paintings/PDA 4040 $500.jpg" alt="Painting" class="whenShy" onclick="openLightbox(this)">
+    </div>
+    <a href="pages/contact.html?painting=PDA" class="purchase-btn">Purchase</a>
+</section>
+
+<section class="painting-section active">
+    <div class="painting-details">
+        <h2 id="painting-name">Poor Gregory</h2>
+        <p><i>48" x 48"</i></p>
+        <p>Oil and acrylic on canvas</p>
+        <p id="price">$650</p>
+    </div>
+    <div class="painting-image">
+        <img src="assets/paintings/poor gregory 4848 $650.jpg" alt="Painting" class="whenShy" onclick="openLightbox(this)">
+    </div>
+    <a href="pages/contact.html?painting=Poor%20Gregory" class="purchase-btn">Purchase</a>
+</section>
+
+<section class="painting-section active">
+    <div class="painting-details">
+        <h2 id="painting-name">The Guitarist</h2>
+        <p><i>27" x 35"</i></p>
+        <p>Oil and acrylic on canvas</p>
+        <p id="price">$700</p>
+    </div>
+    <div class="painting-image">
+        <img src="assets/paintings/The guitarist 27x35 $700.jpg" alt="Painting" class="whenShy" onclick="openLightbox(this)">
+    </div>
+    <a href="pages/contact.html?painting=The%20Guitarist" class="purchase-btn">Purchase</a>
+</section>
+
+<section class="painting-section active">
+    <div class="painting-details">
+        <h2 id="painting-name">What Falls Away</h2>
+        <p><i>36" x 36"</i></p>
+        <p>Oil and acrylic on canvas</p>
+        <p id="price">$420</p>
+    </div>
+    <div class="painting-image">
+        <img src="assets/paintings/What Falls Away 3636 420.jpg" alt="Painting" class="whenShy" onclick="openLightbox(this)">
+    </div>
+    <a href="pages/contact.html?painting=What%20Falls%20Away" class="purchase-btn">Purchase</a>
+</section>
+
+<section class="painting-section active">
+    <div class="painting-details">
+        <h2 id="painting-name">Substance</h2>
+        <p><i>40" x 60"</i></p>
+        <p>Oil and acrylic on canvas</p>
+        <p id="price">$700</p>
+    </div>
+    <div class="painting-image">
+        <img src="assets/paintings/substance 4060 $700.jpg" alt="Painting" class="whenShy" onclick="openLightbox(this)">
+    </div>
+    <a href="pages/contact.html?painting=Substance" class="purchase-btn">Purchase</a>
+</section>
+
+<section class="painting-section active">
+    <div class="painting-details">
+        <h2 id="painting-name">For The Moment</h2>
+        <p><i>36" x 30"</i></p>
+        <p>Oil and acrylic on cavas</p>
+        <p id="price">$380</p>
+    </div>
+    <div class="painting-image">
+        <img src="assets/paintings/For the Moment 3630 $380.jpg" alt="Painting" class="whenShy" onclick="openLightbox(this)">
+    </div>
+    <a href="pages/contact.html?painting=For%20The%20Moment" class="purchase-btn">Purchase</a>
+</section>
+
+<section class="painting-section active">
+    <div class="painting-details">
+        <h2 id="painting-name">Sway</h2>
+        <p><i>24" x 36"</i></p>
+        <p>Oil and acrylic on cavas</p>
+        <p id="price">$700</p>
+    </div>
+    <div class="painting-image">
+        <img src="assets/paintings/sway 24x36 $700.jpg" alt="Painting" class="whenShy" onclick="openLightbox(this)">
+    </div>
+    <a href="pages/contact.html?painting=Sway" class="purchase-btn">Purchase</a>
+</section>
+
+<section class="painting-section active">
+    <div class="painting-details">
+        <h2 id="painting-name">The Pool Players</h2>
+        <p><i>20" x 24"</i></p>
+        <p>Oil and acrylic on cavas</p>
+        <p id="price">$750</p>
+    </div>
+    <div class="painting-image">
+        <img src="assets/paintings/the pool players 2024 $750.jpg" alt="Painting" class="whenShy" onclick="openLightbox(this)">
+    </div>
+    <a href="pages/contact.html?painting=The%20Pool%20Players" class="purchase-btn">Purchase</a>
+</section>
+
+
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <span class="nav-btn prev" onclick="changeImage(-1)">&lt;</span>
+    <span class="nav-btn next" onclick="changeImage(1)">&gt;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox image">
+        <div class="lightbox-title"></div>
+    </div>
+</div>
+
+<script src="js/lightbox.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

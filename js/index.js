@@ -33,4 +33,34 @@ document.addEventListener('DOMContentLoaded', function() {
             openLightbox(this);
         });
     });
+
+    const catalogueLink = document.getElementById('catalogue');
+    const isHomePage = document.querySelector('.painting-section') !== null;
+
+    if (isHomePage) {
+        // Check if we arrived via the catalogue link
+        if (window.location.hash === '#catalogue') {
+            const firstPaintingSection = document.querySelector('.painting-section');
+            const navHeight = document.querySelector('nav').offsetHeight;
+            
+            // Slight delay to ensure page is loaded
+            setTimeout(() => {
+                window.scrollTo({
+                    top: firstPaintingSection.offsetTop - navHeight,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+
+        catalogueLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const firstPaintingSection = document.querySelector('.painting-section');
+            const navHeight = document.querySelector('nav').offsetHeight;
+            
+            window.scrollTo({
+                top: firstPaintingSection.offsetTop - navHeight,
+                behavior: 'smooth'
+            });
+        });
+    }
 });

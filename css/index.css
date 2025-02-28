@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500&display=swap');
 
 body {
+  padding-top: 3.5rem;  /* Adjust based on navbar height */
   background-color: rgba(223, 225, 226, 255);
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -33,49 +34,76 @@ h1 {
   padding: 0;
 }
 
+/* Base navbar styles (mobile-first) */
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 8rem;
-  padding: 1.5rem 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  font-size: 1.6rem;
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  width: 100%;
-  border-bottom: 1px solid #eee;
-  
-  /* Add these properties to make it sticky */
-  position: sticky;
-  top: 0;
-  z-index: 1000;  /* Ensures nav stays on top of other content */
-  backdrop-filter: blur(10px);  /* Optional: adds a nice blur effect to the background */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    position: fixed;  /* Change from sticky to fixed */
+    top: 0;          /* Keep at top */
+    z-index: 1000;
 }
 
 nav a {
-  color: #333;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.5rem 0;
-  position: relative;
-  font-style: normal;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0;
+    position: relative;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 50%;
-  background-color: lightcoral;
+nav a.contact-btn {
+  background-color: rgba(240, 128, 128, 0.2);
+  border-radius: 25px;  /* Rounded edges */
+  padding: 0.3rem 2rem;
   transition: all 0.3s ease;
-  transform: translateX(-50%);
 }
 
-nav a:hover::after {
-  width: 100%;
+nav a.contact-btn:hover {
+  background-color: lightcoral;
+  color: white;
 }
+
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+    nav {
+        gap: 2rem;
+        position: sticky;  /* Return to sticky for larger screens */
+    }
+    
+    nav a {
+        font-size: 1rem;
+        letter-spacing: 0.15em;
+    }
+
+    body {
+        padding-top: 0;  /* Remove padding for larger screens */
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    nav {
+        gap: 8rem;
+        padding: 1.5rem 0;
+    }
+    
+    nav a {
+        font-size: 1.6rem;
+        letter-spacing: 0.2em;
+    }
+}
+
+
 
 header::before {
   content: "";
@@ -177,7 +205,20 @@ html {
   
   .painting-section {
     flex-direction: column;
-    padding: 3rem 1rem;
+    padding:  1rem;
+      /* Add extra padding at bottom for button */
+    min-height: auto;      /* Allow section to grow as needed */
+  }
+
+  .painting-image {
+    padding-left: 0;      /* Remove left padding on mobile */
+    margin-bottom: 12rem;  /* Add space below image for button */
+  }
+
+  .purchase-btn {
+    position: absolute;        
+    padding: none;
+    transform: translateX(-17%);
   }
 }
 
@@ -304,6 +345,15 @@ html {
     
     animation: fadeIn 1.5s ease-out forwards;
     opacity: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .signature {
+        height: auto;     /* Reset height */
+        width: 300px;     /* Fixed width for mobile */
+        max-height: 15vh; /* Prevent from getting too tall */
+    }
 }
 
 /* You can remove or comment out the old h1 styles */
