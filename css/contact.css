@@ -280,6 +280,16 @@ html {
     color: white;
 }
 
+.contact-form button:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.contact-form button.sent {
+    background-color: lightcoral;
+    color: white;
+}
+
 /* Add to mobile responsiveness */
 @media (max-width: 768px) {
     .contact-form input,
