@@ -45,7 +45,7 @@ nav a.contact-btn:hover {
   color: white;
 }
 
-/* Tablet (768px and up) */
+/* Tablet */
 @media (min-width: 768px) {
   nav {
     gap: 2rem;
@@ -58,7 +58,7 @@ nav a.contact-btn:hover {
   }
 }
 
-/* Desktop (1024px and up) */
+/* Desktop  */
 @media (min-width: 1024px) {
   nav {
     gap: 8rem;
@@ -76,11 +76,11 @@ h2 {
 }
 
 p {
-  padding: 110px 110px; /* Adjusted padding */
+  padding: 110px 110px; 
   max-width: 30em;
   line-height: 2.5;
   font-size: 22px;
-  float: left; /* Float paragraph to the left */
+  float: left; 
   margin-left: 40px;
 }
 
@@ -88,36 +88,34 @@ p {
   color: lightcoral;
 }
 
-/* Mobile-first styles for about container */
 #aboutContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 1rem;  /* Match index.css padding */
+    padding: 3rem 1rem;  
     gap: 2rem;
 }
 
 #aboutContainer p {
-    width: 100%;        /* Full width on mobile */
-    padding: 0 1rem;    /* Match index.css padding */
+    width: 100%;       
+    padding: 0 1rem;   
     box-sizing: border-box;
 }
 
 #aboutPhoto {
-    width: 100%;        /* Full width on mobile */
-    max-width: none;    /* Remove max-width constraint */
-    padding: 0 2rem;    /* Match index.css padding */
+    width: 100%;        
+    max-width: none;   
+    padding: 0 2rem;   
     box-sizing: border-box;
 }
 
-/* Tablet and up (768px and up) */
 @media (min-width: 768px) {
     body {
-        padding-top: 0;  /* Remove padding when navbar becomes sticky */
+        padding-top: 0;  
     }
 
     #aboutContainer {
-        flex-direction: row;  /* Side by side on larger screens */
+        flex-direction: row;  
         align-items: flex-start;
         padding: 0 10vw;
         gap: 10vw;
@@ -135,11 +133,11 @@ p {
     }
 }
 
-/* Mobile adjustments */
+/* Mobile */
 @media (max-width: 768px) {
     h1 {
         font-size: 11vw;
-        padding-left: 14vw;  /* Match index.css */
+        padding-left: 14vw;  
     }
 
     nav {
@@ -149,7 +147,7 @@ p {
     }
 
     #aboutContainer {
-        padding: 0 10vw;  /* Match the header padding */
+        padding: 0 10vw;  
     }
 
     #aboutContainer p {
@@ -167,7 +165,7 @@ p {
     }
 }
 
-/* Smooth scroll behavior */
+
 html {
   scroll-behavior: smooth;
 }
@@ -201,7 +199,90 @@ h1 {
 @media (max-width: 768px) {
     h1 {
         font-size: 11vw;
-        padding-left: 14vw;  /* Larger font size for mobile */
+        padding-left: 14vw;  
         padding-bottom: 2vh;
     }
+}
+
+/* Medium Desktop */
+@media (min-width: 780px) and (max-width: 1441px) {
+    body {
+        padding-top: 0;  
+    }
+    
+    nav {
+        position: sticky;
+        top: 0;
+        gap: 3rem;
+        padding: 1rem 0;
+    }
+    
+    nav a {
+        font-size: 1.1rem;
+        letter-spacing: 0.12em;
+        padding: 0.4rem 0.6rem;
+    }
+    
+    nav a.contact-btn {
+        padding: 0.4rem 1.2rem;
+    }
+    
+    header {
+        height: 150px;
+    }
+    
+    h1 {
+        font-size: 4vw;
+    }
+    
+    h2 {
+        padding: 10px 60px;
+    }
+    
+    p {
+        padding: 60px 60px;
+    }
+    
+    #aboutContainer {
+        padding: 0 1vw;
+        gap: 1vw;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1919px) {
+  nav {
+    gap: 4rem;
+    padding: 1rem 0;
+  }
+  
+  nav a {
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  nav a.contact-btn {
+    padding: 0.5rem 1.5rem;
+  }
+  
+  header {
+    height: 700px;
+  }
+  
+  h1 {
+    font-size: 4.5vw;
+  }
+  
+  h2 {
+    padding: 10px 60px;
+  }
+  
+  p {
+    padding: 60px 60px;
+  }
+  
+  #aboutContainer {
+    padding: 0 5vw;
+    gap: 1vw;
+  }
 }

@@ -1,8 +1,7 @@
-/* Import modern fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500&display=swap');
 
 body {
-    padding-top: 6rem;  /* Space for fixed navbar on mobile */
+    padding-top: 6rem;  
     background-color: rgba(223, 225, 226, 255);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -87,7 +86,7 @@ nav a.contact-btn:hover {
 }
 
 .social-location .contact-item {
-    margin-bottom: 0;  /* Remove bottom margin since they're side by side */
+    margin-bottom: 0;  
 }
 
 .social-location .contact-item h3 {
@@ -166,7 +165,7 @@ nav a.contact-btn:hover {
     object-fit: cover;
 }
 
-/* Mobile adjustments */
+/* Mobile */
 @media (max-width: 768px) {
     nav {
         padding: 1rem 0;
@@ -195,7 +194,7 @@ nav a.contact-btn:hover {
     }
 }
 
-/* Tablet (768px and up) */
+/* Tablet*/
 @media (min-width: 768px) {
     nav {
         gap: 2rem;
@@ -208,11 +207,11 @@ nav a.contact-btn:hover {
     }
 
     body {
-        padding-top: 0;  /* Remove padding when navbar becomes sticky */
+        padding-top: 0; 
     }
 }
 
-/* Desktop (1024px and up) */
+/* Desktop  */
 @media (min-width: 1024px) {
     nav {
         gap: 8rem;
@@ -225,7 +224,48 @@ nav a.contact-btn:hover {
     }
 }
 
-/* Smooth scroll behavior */
+/* Medium Desktop (780px - 1441px) - Fix header visibility */
+@media (min-width: 780px) and (max-width: 1441px) {
+    body {
+        padding-top: 0;  /* Remove padding when navbar becomes sticky */
+    }
+    
+    nav {
+        position: sticky;
+        top: 0;
+        gap: 3rem;
+        padding: 1rem 0;
+    }
+    
+    nav a {
+        font-size: 1.1rem;
+        letter-spacing: 0.12em;
+        padding: 0.4rem 0.6rem;
+    }
+    
+    nav a.contact-btn {
+        padding: 0.4rem 1.2rem;
+    }
+}
+
+/* 1440×900 Specific Breakpoint - Adjusted for narrower screens */
+@media (min-width: 1441px) and (max-width: 1919px) {
+  nav {
+    gap: 4rem;
+    padding: 1rem 0;
+  }
+  
+  nav a {
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  nav a.contact-btn {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -263,7 +303,7 @@ html {
 }
 
 .contact-form button {
-    background-color: rgba(240, 128, 128, 0.2);  /* Light coral with low opacity */
+    background-color: rgba(240, 128, 128, 0.2);  
     border: none;
     color: #333;
     padding: 0.8rem 2rem;
@@ -275,7 +315,7 @@ html {
 }
 
 .contact-form button:hover {
-    background-color: lightcoral;  /* Full coral color on hover */
+    background-color: lightcoral;  
     border-color: lightcoral;
     color: white;
 }
@@ -290,15 +330,15 @@ html {
     color: white;
 }
 
-/* Add to mobile responsiveness */
+
 @media (max-width: 768px) {
     .contact-form input,
     .contact-form textarea {
-        font-size: 16px; /* Prevents zoom on mobile */
+        font-size: 16px; 
     }
 }
 
-/* Add to your existing CSS */
+
 .hidden {
     display: none;
 }

@@ -1,8 +1,7 @@
-/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500&display=swap');
 
 body {
-    padding-top: 6rem;  /* Space for fixed navbar on mobile */
+    padding-top: 6rem; 
     background-color: rgba(223, 225, 226, 255);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -129,7 +128,6 @@ h1 {
     aspect-ratio: 1/2;
 }
 
-/* Responsive design */
 @media (max-width: 900px) {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -153,22 +151,21 @@ h1 {
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr;  /* Single column on mobile */
+        grid-template-columns: 1fr; 
         gap: 1rem;
     }
 
     .gallery-item.wide {
-        grid-column: auto;  /* Reset grid spanning */
+        grid-column: auto;  
         aspect-ratio: 1;
     }
 
     .gallery-item.tall {
-        grid-row: auto;     /* Reset grid spanning */
+        grid-row: auto;    
         aspect-ratio: 1;
     }
 }
 
-/* Tablet (768px and up) */
 @media (min-width: 768px) {
     nav {
         gap: 2rem;
@@ -181,11 +178,10 @@ h1 {
     }
 
     body {
-        padding-top: 0;  /* Remove padding when navbar becomes sticky */
+        padding-top: 0; 
     }
 }
 
-/* Desktop (1024px and up) */
 @media (min-width: 1024px) {
     nav {
         gap: 8rem;
@@ -198,7 +194,89 @@ h1 {
     }
 }
 
-/* Lightbox styles */
+/* Medium Desktop  */
+@media (min-width: 780px) and (max-width: 1441px) {
+    body {
+        padding-top: 0;  
+    }
+    
+    nav {
+        position: sticky;
+        top: 0;
+        gap: 3rem;
+        padding: 1rem 0;
+    }
+    
+    nav a {
+        font-size: 1.1rem;
+        letter-spacing: 0.12em;
+        padding: 0.4rem 0.6rem;
+    }
+    
+    nav a.contact-btn {
+        padding: 0.4rem 1.2rem;
+    }
+    
+    header {
+        height: 150px;
+    }
+    
+    h1 {
+        font-size: 4vw;
+    }
+    
+    .shows-container {
+        padding: 0 6vw;
+    }
+    
+    .show-section {
+        margin-bottom: 3rem;
+    }
+    
+    .show-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1919px) {
+  nav {
+    gap: 4rem;
+    padding: 1rem 0;
+  }
+  
+  nav a {
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  nav a.contact-btn {
+    padding: 0.5rem 1.5rem;
+  }
+  
+  header {
+    height: 150px;
+  }
+  
+  h1 {
+    font-size: 4.5vw;
+  }
+  
+  .shows-container {
+    padding: 0 6vw;
+  }
+  
+  .show-section {
+    margin-bottom: 3rem;
+  }
+  
+  .show-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .lightbox {
     display: none;
     position: fixed;
@@ -278,16 +356,16 @@ h1 {
 
 .show-section.comma .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Two equal columns */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 1rem;
 }
 
 .show-section.comma .gallery-item {
-    aspect-ratio: 1;  /* Make items square */
+    aspect-ratio: 1;  
 }
 
 @media (max-width: 768px) {
     .show-section.comma .gallery-grid {
-        grid-template-columns: 1fr;  /* Single column on mobile */
+        grid-template-columns: 1fr; 
     }
 }
